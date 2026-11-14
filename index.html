@@ -1,61 +1,34 @@
 <!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#a83850">
-  <meta name="description" content="더디에르 멤버를 위한 상시 공지. 홈페이지 등록, 방송 소개, 신호탄 음원, 출근 안내와 필요한 자료를 한곳에서 확인하세요.">
-  <title>더디에르 · 멤버 가이드</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
-</head>
-<body>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#a83850"><meta name="description" content="더디에르 멤버 자료 제출 안내. 두 양식을 복사해 작성하고 사진과 함께 담당 매니저에게 보내주세요. 신호탄은 최대 50초입니다.">
+<title>더디에르 · 멤버 자료 제출 안내</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css?v=2"><script src="app.js?v=2" defer></script>
+</head><body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
-<header class="header">
-  <a class="brand" href="#"><span class="brand-mark">d.</span><span>THE DIÈRE<small>더디에르 멤버 가이드</small></span></a>
-  <nav aria-label="주요 메뉴"><a href="#prepare">제출 자료</a><a href="#schedule">출근 안내</a><a href="#resources">자료실</a><a href="#managers">담당 매니저</a></nav>
-  <a class="official" href="https://diere.kr/" target="_blank" rel="noopener noreferrer">공식 홈페이지 <span aria-hidden="true">↗</span></a>
-</header>
-<main id="main">
-  <section class="hero wrap" aria-labelledby="hero-title">
-    <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> FOR OUR MEMBERS · 상시 공지</p><h1 id="hero-title">함께 만드는 방송,<br>준비는 <em>여기서.</em></h1><p class="hero-description">더디에르 멤버 여러분을 위한 안내.<br>등록부터 방송 준비까지, 필요한 내용을 한곳에 모았어요.</p><div class="hero-actions"><a class="button primary" href="#prepare">제출 자료 확인하기 <span aria-hidden="true">↓</span></a><button class="button secondary" data-copy="all">전체 양식 복사 <span aria-hidden="true">⧉</span></button></div><p class="hero-note">이미 제출했다면, <strong>미제출 항목과 변경된 내용만</strong> 보내주세요.</p></div>
-    <aside class="hero-card" aria-label="방송 준비 핵심 안내"><div class="card-top"><span>MEMBER’S NOTE</span><span aria-hidden="true">✦</span></div><p class="note-title">오늘의 좋은 방송은<br>작은 준비에서 시작됩니다.</p><div class="time-feature"><span>스튜디오 입실 완료</span><strong>16<span>:</span>30</strong><span>개인 출근방송도 이때까지 종료해주세요.</span></div><div class="note-bottom"><span class="status-dot"></span> 17:00 본방송 시작 <span class="note-flower" aria-hidden="true">✳</span></div></aside>
-  </section>
-  <div class="notice-band"><div class="wrap"><strong><span aria-hidden="true">↗</span> 제출은 담당 매니저에게</strong><p>양식을 복사해 작성한 뒤, 소속 팀 담당 매니저에게 전달해주세요.</p><a href="#managers">내 담당 매니저 확인 <span aria-hidden="true">→</span></a></div></div>
-  <div class="workspace wrap">
-    <aside class="sidebar"><div class="sidebar-inner"><p class="eyebrow">YOUR CHECKLIST</p><h2>하나씩 준비해요.</h2><p class="muted small">제출한 자료를 체크해두세요.</p><div class="progress-label"><strong id="progress-text" aria-live="polite">0 / 5 완료</strong><button id="reset-checks" class="text-button">초기화</button></div><progress id="progress" max="5" value="0" aria-label="자료 제출 준비 현황"></progress><div class="checks">
-      <label><input type="checkbox" data-check="profile"><span>홈페이지 멤버 정보</span></label>
-      <label><input type="checkbox" data-check="intro"><span>방송용 소개 자료</span></label>
-      <label><input type="checkbox" data-check="photo"><span>웰컴 이미지용 사진</span></label>
-      <label><input type="checkbox" data-check="music"><span>신호탄 2종 음원·금액</span></label>
-      <label><input type="checkbox" data-check="toonation"><span>투네이션 가입·설정</span></label>
-    </div><p class="storage-note" id="storage-note">체크 상태는 이 브라우저에만 저장됩니다.<br>체크해도 매니저에게 전송되지 않아요.</p><a class="sidebar-link" href="#resources">필요한 링크 바로가기 <span aria-hidden="true">↗</span></a></div></aside>
-    <div class="main-content">
-      <section id="prepare" class="section"><div class="section-heading"><div><p class="eyebrow">01 / MEMBER INFORMATION</p><h2>등록과 소개 자료</h2></div><span class="pill">미제출 · 변경 내용만</span></div><p class="section-desc">아래 양식을 복사해서 작성해주세요. 사진은 메시지에 파일로 첨부해주세요.</p>
-      <details class="accordion" open><summary><span class="section-icon" aria-hidden="true">01</span><span>홈페이지 등록용 멤버 정보<small>프로필 · 활동 플랫폼 · 후원 링크</small></span><span class="plus" aria-hidden="true">+</span></summary><div class="accordion-body"><div class="field-grid"><div><span>01</span> 멤버명</div><div><span>02</span> 이름표에 사용할 이름</div><div><span>03</span> 소속 팀</div><div><span>04</span> 플단명</div><div><span>05</span> 프로필 이미지 <small>사진 첨부</small></div><div><span>06</span> SOOP 링크</div><div><span>07</span> CHZZK 링크</div><div><span>08</span> TikTok 링크</div><div><span>09</span> Instagram 링크</div><div><span>10</span> YouTube 링크</div><div><span>11</span> 구글메일 주소</div><div><span>12</span> 투네이션 후원 링크</div></div><div class="info-box"><strong>기존 멤버도 꼭 확인해주세요.</strong><p>구글메일 주소와 투네이션 후원 링크는 기존 멤버분들도 제출해주세요.</p></div><ul class="help-list"><li>사용하지 않는 플랫폼은 <strong>‘없음’</strong>으로 적어주세요.</li><li>SOOP·YouTube 링크를 제출하면 디에르 홈페이지의 개인 방송국에 게시글·다시보기·클립이 표시됩니다. <strong>노출을 원하지 않는 플랫폼의 링크는 제출하지 않으셔도 됩니다.</strong></li></ul><button class="copy-button" data-copy="profile">멤버 정보 양식 복사 <span aria-hidden="true">⧉</span></button></div></details>
-      <details class="accordion"><summary><span class="section-icon" aria-hidden="true">02</span><span>방송용 멤버 소개 자료<small>나의 소개 · 대표 시그 · 공약</small></span><span class="plus" aria-hidden="true">+</span></summary><div class="accordion-body"><div class="field-grid"><div>스트리머명</div><div>나이</div><div>키</div><div>혈액형</div><div>MBTI</div><div>주로 하는 콘텐츠</div><div>나의 장점</div><div>팬들에게 한마디</div><div>잘하는 시그</div><div>나의 대표 공약</div></div><button class="copy-button" data-copy="intro">멤버 소개 양식 복사 <span aria-hidden="true">⧉</span></button></div></details>
-      <div class="photo-note"><span class="photo-symbol" aria-hidden="true">▧</span><div><h3>사진과 공약표도 함께 준비해주세요.</h3><p><strong>웰컴 이미지용 사진</strong>을 이름(활동명)과 함께 보내주세요.<br><strong>공약표 제작을 원하는 분</strong>은 공약표에 넣을 내용도 보내주세요.</p></div></div>
-      </section>
-      <section id="signal" class="section"><div class="section-heading"><div><p class="eyebrow">02 / YOUR SIGNATURE SOUND</p><h2>나만의 신호탄</h2></div><span class="pill">20만 원대 + 40만 원대</span></div><p class="section-desc">각 금액대에서 원하는 후원 금액과 음원을 하나씩 정해주세요.</p><div class="signal-grid"><article class="signal-card"><p class="eyebrow">SIGNAL 01</p><h3>20<span>만 원대</span></h3><p class="amount-range">200,000 ~ 299,900원</p><ul><li>원하는 후원 금액</li><li>곡명과 음원 링크</li><li>음원 사용 구간</li></ul><button class="copy-button" data-copy="signal20">20만 원대 양식 복사 <span aria-hidden="true">⧉</span></button></article><article class="signal-card rose"><p class="eyebrow">SIGNAL 02</p><h3>40<span>만 원대</span></h3><p class="amount-range">400,000 ~ 499,900원</p><ul><li>원하는 후원 금액</li><li>곡명과 음원 링크</li><li>음원 사용 구간</li></ul><button class="copy-button" data-copy="signal40">40만 원대 양식 복사 <span aria-hidden="true">⧉</span></button></article></div><p class="time-tip"><span aria-hidden="true">◷</span> 원하는 구간이 있다면 <strong>시작·종료 시간</strong>을 적어주세요. <span>예시 <code>00:30 ~ 01:00</code></span></p></section>
-      <section id="schedule" class="section"><div class="section-heading"><div><p class="eyebrow">03 / STUDIO TIMELINE</p><h2>방송일 출근 안내</h2></div></div><div class="timeline"><article><span class="timeline-dot"></span><p class="time">15:30–16:30</p><div><h3>스튜디오 출근 · 방송 준비</h3><p>식사와 방송 준비를 마쳐주세요.</p></div></article><article class="highlight"><span class="timeline-dot"></span><p class="time">16:30<span>까지</span></p><div><h3>스튜디오 입실 완료</h3><p>개인 출근방송도 종료해주세요.</p></div></article><article><span class="timeline-dot"></span><p class="time">17:00</p><div><h3>본방송 시작</h3><p>함께 준비한 방송을 시작합니다.</p></div></article></div><div class="warning"><strong>지각 기준을 꼭 확인해주세요.</strong><p>16:30 이후 입실 시 지각으로 처리됩니다.<br>지각비는 <strong>1분당 5,000원</strong>이며, <strong>최대 300만 원</strong>까지 부과됩니다.</p></div></section>
-      <section id="toonation" class="section"><div class="section-heading"><div><p class="eyebrow">04 / READY TO PLAY</p><h2>투네이션 가입과 설정</h2></div></div><p class="section-desc">개인 방송에서도 멤버들이 함께 미니게임을 즐길 수 있도록<br>투네이션 가입과 설정을 미리 완료해주세요.</p><a class="button secondary" href="https://toonation-alert-tutorial-20261009.workspace-012369.chatgpt.site/" target="_blank" rel="noopener noreferrer">가입 및 시그 등록 안내 보기 <span aria-hidden="true">↗</span></a><div class="private-note"><span aria-hidden="true">◈</span><div><h3>OBS 알림 위젯 링크는 개인 메시지로</h3><p>OBS 후원 알림 위젯 링크는 <strong>일반 후원 페이지 링크와 다릅니다.</strong><br>공개 단톡방에 올리지 말고, 담당 매니저에게 개인 메시지로 보내주세요.</p></div></div></section>
-    </div>
-  </div>
-  <section id="resources" class="resources"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">05 / RESOURCE LIBRARY</p><h2>필요한 자료, 바로 여기.</h2></div><span class="muted small">링크는 새 창에서 열립니다 ↗</span></div><div class="resource-grid">
-    <a href="https://diere.kr/" target="_blank" rel="noopener noreferrer"><span class="resource-tag">OFFICIAL</span><h3>디에르 공식 홈페이지</h3><p>멤버들과 함께하는 디에르</p><span class="resource-arrow" aria-hidden="true">↗</span></a>
-    <a href="https://diere-team-schedule.editbsw.chatgpt.site/" target="_blank" rel="noopener noreferrer"><span class="resource-tag">SCHEDULE</span><h3>디에르 일정표</h3><p>팀별 일정 확인하기</p><span class="resource-arrow" aria-hidden="true">↗</span></a>
-    <a href="https://sig-dance-links-2026.workspace-012369.chatgpt.site/" target="_blank" rel="noopener noreferrer"><span class="resource-tag">REFERENCE</span><h3>시그 춤 참고영상</h3><p>시그 준비를 위한 영상 모음</p><span class="resource-arrow" aria-hidden="true">↗</span></a>
-    <a href="https://toonation-alert-tutorial-20261009.workspace-012369.chatgpt.site/" target="_blank" rel="noopener noreferrer"><span class="resource-tag">GUIDE</span><h3>투네이션 설정 안내</h3><p>가입부터 시그 등록까지</p><span class="resource-arrow" aria-hidden="true">↗</span></a>
-    <a href="https://mega.nz/folder/W9glXIwa#gOTZ_ZWOGcUDqtfoUPbvsQ" target="_blank" rel="noopener noreferrer"><span class="resource-tag">IMAGE</span><h3>개인 방송용 시그 이미지</h3><p>방송에 사용할 이미지 자료</p><span class="resource-arrow" aria-hidden="true">↗</span></a>
-    <a href="https://mega.nz/folder/L1ByXaaZ#NREJmVyywH2J_hf1JatCfQ" target="_blank" rel="noopener noreferrer"><span class="resource-tag">ARCHIVE</span><h3>라이브 녹화본</h3><p>지난 방송 영상 모음</p><span class="resource-arrow" aria-hidden="true">↗</span></a>
-    <a href="https://mega.nz/folder/zkI2gKoQ#JZUVz2ED4AOV3agDWNF_uA" target="_blank" rel="noopener noreferrer"><span class="resource-tag">SHORTS</span><h3>쇼츠용 편집본</h3><p>짧게 만나는 방송 하이라이트</p><span class="resource-arrow" aria-hidden="true">↗</span></a>
-  </div></div></section>
-  <section id="managers" class="managers wrap"><div class="section-heading"><div><p class="eyebrow">06 / WE’RE HERE FOR YOU</p><h2>자료 제출과 문의</h2></div></div><p class="section-desc">작성한 양식과 사진을 소속 팀 담당 매니저에게 보내주세요.</p><div class="manager-grid"><article><span>TEAM 01</span><h3>리재팀</h3><p>권기범 <small>매니저</small></p></article><article><span>TEAM 02</span><h3>현준팀</h3><p>승일 · 정헌 <small>매니저</small></p></article><article><span>TEAM 03</span><h3>표범상사</h3><p>형철 <small>매니저</small></p></article></div><div class="closing"><p>준비는 꼼꼼하게, 방송은 즐겁게.</p><button class="button primary" data-copy="all">전체 제출 양식 복사 <span aria-hidden="true">⧉</span></button></div></section>
+<header><div class="shell header-inner"><a class="brand" href="#">더디에르 <span>멤버 안내</span></a><a class="header-link" href="https://diere.kr/" target="_blank" rel="noopener noreferrer">공식 홈페이지 ↗</a></div></header>
+<main class="shell" id="main">
+<section class="intro" aria-labelledby="page-title"><p class="label">멤버 필수 확인</p><h1 id="page-title">두 양식을 작성해서<br>담당 매니저에게 보내주세요.</h1><p class="intro-note">이미 제출했다면 <strong>미제출·변경된 내용만</strong> 보내주세요.</p><ol class="steps"><li><b>1</b> 양식 복사</li><li><b>2</b> 내용 작성·사진 첨부</li><li><b>3</b> 매니저에게 전달</li></ol></section>
+<section id="prepare" aria-labelledby="forms-title"><h2 id="forms-title" class="sr-only">작성해서 보내야 할 두 가지 양식</h2>
+<div class="form-grid">
+<article class="form-card"><div class="form-heading"><span class="number">1</span><h2>홈페이지 등록용<br>멤버 정보</h2></div><p class="card-purpose">홈페이지에 등록할 내 정보를 적어주세요.</p><p class="short-list">멤버명 · 이름표 이름 · 소속 팀 · 플단명<br>프로필 사진 · 플랫폼 링크 · 구글메일 · 후원 링크</p><div class="important"><strong>기존 멤버도 제출</strong><br>구글메일 주소 + 투네이션 후원 링크</div><button class="button primary" data-copy="profile">① 멤버 정보 양식 복사</button><p class="button-help">복사 → 메시지에 붙여넣기 → 내용 작성</p><details><summary>작성 항목 12개 · 주의사항 보기</summary><div class="details-content"><ol class="fields"><li>멤버명</li><li>이름표에 사용할 이름</li><li>소속 팀</li><li>플단명</li><li>프로필 이미지 <small>사진 파일 첨부</small></li><li>SOOP 링크</li><li>CHZZK 링크</li><li>TikTok 링크</li><li>Instagram 링크</li><li>YouTube 링크</li><li>구글메일 주소</li><li>투네이션 후원 링크</li></ol><p>사용하지 않는 플랫폼은 <strong>‘없음’</strong>으로 적어주세요.</p><p>SOOP·YouTube 링크를 제출하면 홈페이지의 개인 방송국에 게시글·다시보기·클립이 표시됩니다. <strong>노출을 원하지 않는 플랫폼 링크는 제출하지 않으셔도 됩니다.</strong></p></div></details></article>
+<article class="form-card"><div class="form-heading"><span class="number">2</span><h2>방송용<br>멤버 소개 자료</h2></div><p class="card-purpose">방송에서 소개할 내 이야기를 적어주세요.</p><p class="short-list">스트리머명 · 나이 · 키 · 혈액형 · MBTI<br>콘텐츠 · 장점 · 팬들에게 한마디 · 시그 · 공약</p><div class="important"><strong>사진도 함께 보내주세요</strong><br>웰컴 이미지용 사진 + 이름(활동명)</div><button class="button primary" data-copy="intro">② 멤버 소개 양식 복사</button><p class="button-help">복사 → 메시지에 붙여넣기 → 내용 작성</p><details><summary>작성 항목 10개 · 사진 안내 보기</summary><div class="details-content"><ol class="fields"><li>스트리머명</li><li>나이</li><li>키</li><li>혈액형</li><li>MBTI</li><li>주로 하는 콘텐츠</li><li>나의 장점</li><li>팬들에게 한마디</li><li>잘하는 시그</li><li>나의 대표 공약</li></ol><p><strong>웰컴 이미지용 사진</strong>을 이름(활동명)과 함께 첨부해주세요.</p><p><strong>공약표 제작을 원하는 분</strong>은 공약표에 넣을 내용도 보내주세요.</p></div></details></article>
+</div><button class="button combined" data-copy="member">두 양식을 한 번에 복사하기</button>
+</section>
+<section id="managers" class="manager-section"><div class="section-title"><span class="step-label">작성했다면</span><h2>내 팀 매니저에게 보내주세요</h2></div><p class="section-note">작성한 두 양식과 사진 파일을 함께 전달해주세요.</p><div class="managers"><div><strong>리재팀</strong><p>권기범 <span>매니저</span></p></div><div><strong>현준팀</strong><p>승일 · 정헌 <span>매니저</span></p></div><div><strong>표범상사</strong><p>형철 <span>매니저</span></p></div></div></section>
+<section id="signal" class="section"><div class="section-title"><span class="step-label">신호탄 준비</span><h2>음원 2개를 골라주세요 <span class="badge">각 최대 50초</span></h2></div><p class="section-note">20만 원대와 40만 원대에서 각각 <strong>후원 금액·곡명·음원 링크·시작/종료 시간</strong>을 정해 매니저에게 보내주세요.</p><div class="signal-grid"><article><h3>20만 원대 신호탄</h3><p>200,000 ~ 299,900원 중 선택</p><button class="button outline" data-copy="signal20">20만 원대 양식 복사</button></article><article><h3>40만 원대 신호탄</h3><p>400,000 ~ 499,900원 중 선택</p><button class="button outline" data-copy="signal40">40만 원대 양식 복사</button></article></div><div class="duration"><strong>사용 구간은 50초 이내</strong><span>예: 00:30 ~ 01:20 <b>(50초)</b></span></div></section>
+<section id="schedule" class="section"><div class="section-title"><span class="step-label">방송 당일</span><h2>16:30까지 입실 완료</h2></div><div class="schedule"><div><strong>15:30–16:30</strong><span>출근 · 식사 · 방송 준비</span></div><div class="highlight"><strong>16:30까지</strong><span>입실 완료 · 개인 출근방송 종료</span></div><div><strong>17:00</strong><span>본방송 시작</span></div></div><p class="warning"><strong>16:30 이후 입실은 지각입니다.</strong><br>지각비 1분당 5,000원 · 최대 300만 원</p></section>
+<section id="toonation" class="section"><div class="section-title"><span class="step-label">방송 전 설정</span><h2>투네이션 가입·설정 완료하기</h2></div><p class="section-note">개인 방송에서도 멤버들과 미니게임을 즐길 수 있도록 미리 준비해주세요.</p><a class="button outline" href="https://toonation-alert-tutorial-20261009.workspace-012369.chatgpt.site/" target="_blank" rel="noopener noreferrer">투네이션 가입·시그 등록 안내 ↗</a><div class="security"><strong>OBS 알림 위젯 링크 → 매니저 개인 메시지</strong><p>일반 후원 페이지 링크와 다릅니다.<br><b>공개 단톡방에 올리지 마세요.</b></p></div></section>
+<section id="resources" class="section"><div class="section-title"><h2>필요한 자료 바로가기</h2></div><div class="links">
+<a href="https://diere-team-schedule.editbsw.chatgpt.site/" target="_blank" rel="noopener noreferrer">디에르 일정표 <span>↗</span></a>
+<a href="https://sig-dance-links-2026.workspace-012369.chatgpt.site/" target="_blank" rel="noopener noreferrer">시그 춤 참고영상 <span>↗</span></a>
+<a href="https://mega.nz/folder/W9glXIwa#gOTZ_ZWOGcUDqtfoUPbvsQ" target="_blank" rel="noopener noreferrer">개인 방송용 시그 이미지 <span>↗</span></a>
+<a href="https://mega.nz/folder/L1ByXaaZ#NREJmVyywH2J_hf1JatCfQ" target="_blank" rel="noopener noreferrer">라이브 녹화본 <span>↗</span></a>
+<a href="https://mega.nz/folder/zkI2gKoQ#JZUVz2ED4AOV3agDWNF_uA" target="_blank" rel="noopener noreferrer">쇼츠용 편집본 <span>↗</span></a>
+</div><p class="link-note">자료는 새 창에서 열립니다.</p></section>
+<footer><strong>더디에르</strong><a href="#">맨 위로 ↑</a></footer>
 </main>
-<footer class="footer wrap"><a class="brand" href="#"><span class="brand-mark">d.</span><span>THE DIÈRE<small>더디에르 멤버 가이드</small></span></a><p>멤버 여러분의 새로운 순간을 함께합니다.</p><a href="#">맨 위로 ↑</a></footer>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
-<dialog id="copy-dialog"><h2>제출 양식</h2><p>아래 내용을 선택해 복사한 뒤 작성해주세요.</p><textarea id="copy-fallback" aria-label="복사할 제출 양식" readonly></textarea><form method="dialog"><button class="button primary">닫기</button></form></dialog>
-<noscript><div class="noscript">양식 복사와 체크 저장 기능은 JavaScript를 켜면 사용할 수 있습니다. 안내 내용과 자료 링크는 그대로 이용할 수 있습니다.</div></noscript>
-</body>
-</html>
+<dialog id="copy-dialog"><h2>양식을 복사해주세요</h2><p>아래 내용을 복사해 메시지에 붙여넣고 작성해주세요.</p><textarea id="copy-fallback" aria-label="복사할 제출 양식" readonly></textarea><form method="dialog"><button class="button primary">닫기</button></form></dialog>
+<noscript><p class="noscript">양식 복사는 JavaScript가 필요합니다. ‘작성 항목 보기’를 열어 항목을 확인한 뒤 작성해주세요.</p></noscript>
+</body></html>
