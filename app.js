@@ -6,7 +6,7 @@ const templates = {
   signal40: '[40만 원대 신호탄]\n• 후원 금액 :          원\n  ※ 400,000~499,900원 내에서 선택\n• 곡명 :\n• 음원 링크 :\n• 사용 구간 :\n  ※ 사용 구간은 최대 50초입니다. 시작·종료 시간을 적어주세요. (예: 00:30~01:20, 50초)'
 };
 templates.all = '[더디에르 자료 제출]\n이미 제출한 항목은 제외하고 미제출 항목과 변경된 내용만 작성해주세요.\n소속 팀 담당 매니저에게 전달해주세요.\n\n' + Object.values(templates).join('\n\n━━━━━━━━━━━━━━━━━━\n\n') + '\n\n※ OBS 후원 알림 위젯 링크는 일반 후원 링크와 다릅니다. 공개 단톡방이 아닌 담당 매니저 개인 메시지로 보내주세요.';
-templates.member = '[더디에르 멤버 자료 제출]\n미제출·변경된 내용만 작성하고, 사진과 함께 소속 팀 담당 매니저에게 보내주세요.\n\n' + templates.profile + '\n\n━━━━━━━━━━━━━━━━━━\n\n' + templates.intro;
+templates.member = '[더디에르 멤버 자료 제출]\n미제출·변경된 내용만 작성하고, 사진과 함께 소속 팀 담당 매니저에게 꼭 보내주세요.\n\n' + templates.profile + '\n\n━━━━━━━━━━━━━━━━━━\n\n' + templates.intro;
 let toastTimer;
 const toast = document.getElementById('toast');
 function announce(message) {
@@ -22,7 +22,7 @@ document.querySelectorAll('[data-copy]').forEach(button => {
     try {
       if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
       await navigator.clipboard.writeText(text);
-      announce('양식을 복사했어요. 작성 후 담당 매니저에게 보내주세요.');
+      announce('복사 완료! 빈칸을 작성하고 사진과 함께 담당 매니저에게 꼭 보내주세요.');
     } catch {
       const dialog = document.getElementById('copy-dialog');
       const field = document.getElementById('copy-fallback');
