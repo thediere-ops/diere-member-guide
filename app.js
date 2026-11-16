@@ -17,6 +17,10 @@ function announce(message) {
 }
 document.querySelectorAll('[data-copy]').forEach(button => {
   button.addEventListener('click', async () => {
+    const dialogTitle = document.querySelector('#copy-dialog h2');
+    dialogTitle.textContent = '양식을 복사해주세요';
+    document.querySelector('#copy-dialog p').textContent = '아래 내용을 복사해 빈칸을 작성한 뒤, 사진과 함께 담당 매니저에게 꼭 보내주세요.';
+    document.getElementById('copy-fallback').setAttribute('aria-label', '복사할 제출 양식');
     const text = templates[button.dataset.copy];
     if (!text) return;
     try {
@@ -27,6 +31,55 @@ document.querySelectorAll('[data-copy]').forEach(button => {
       const dialog = document.getElementById('copy-dialog');
       const field = document.getElementById('copy-fallback');
       field.value = text;
+      dialog.showModal();
+      field.focus();
+      field.select();
+    }
+  });
+});
+
+// Keep the date and weekday in Korea time, including after midnight or returning to the tab.
+function updateStudioToday(now = new Date()) {
+  const parts = new Intl.DateTimeFormat('ko-KR', {
+    timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short'
+  }).formatToParts(now);
+  const part = type => parts.find(value => value.type === type).value;
+  const weekday = part('weekday');
+  const date = document.getElementById('today-date');
+  date.dateTime = part('year') + '-' + part('month') + '-' + part('day');
+  date.textContent = part('year') + '년 ' + Number(part('month')) + '월 ' + Number(part('day')) + '일 ' + weekday + '요일';
+  let studioName = '';
+  document.querySelectorAll('.studio-card').forEach(card => {
+    const active = card.dataset.days.split(',').includes(weekday);
+    card.classList.toggle('is-today', active);
+    card.querySelector('.today-badge').hidden = !active;
+    if (active) studioName = card.querySelector('h3').textContent;
+  });
+  const message = studioName
+    ? '오늘은 ' + weekday + '요일 · ' + studioName + '로 오세요.'
+    : '일요일 장소는 담당 매니저에게 확인해주세요.';
+  const status = document.getElementById('today-studio');
+  if (status.textContent !== message) status.textContent = message;
+}
+updateStudioToday();
+setInterval(updateStudioToday, 30000);
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) updateStudioToday();
+});
+document.querySelectorAll('[data-address]').forEach(button => {
+  button.addEventListener('click', async () => {
+    const address = button.dataset.address;
+    try {
+      if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(address);
+      announce('스튜디오 주소가 복사되었습니다.');
+    } catch {
+      const dialog = document.getElementById('copy-dialog');
+      dialog.querySelector('h2').textContent = '스튜디오 주소를 복사해주세요';
+      dialog.querySelector('p').textContent = '아래 주소를 길게 누르거나 선택해 복사해주세요.';
+      const field = document.getElementById('copy-fallback');
+      field.setAttribute('aria-label', '복사할 스튜디오 주소');
+      field.value = address;
       dialog.showModal();
       field.focus();
       field.select();
