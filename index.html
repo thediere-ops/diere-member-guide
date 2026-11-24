@@ -3,10 +3,11 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#a83850"><meta name="description" content="더디에르 멤버 자료 제출 안내. 두 양식을 복사해 작성하고 사진과 함께 담당 매니저에게 보내주세요. 신호탄은 최대 50초입니다.">
 <title>더디에르 표범상사 멤버안내</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css?v=studios-calendar-fit-20261117"><script src="app.js?v=studios-calendar-fit-20261117" defer></script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css?v=live-schedule-20261125"><script src="app.js?v=live-schedule-20261125" defer></script><script src="schedule.js?v=live-schedule-20261125" defer></script><link rel="stylesheet" href="schedule.css?v=live-schedule-20261125">
 </head><body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 <header><div class="shell header-inner"><a class="brand" href="#">더디에르 표범상사 <span>멤버안내</span></a><a class="header-link" href="https://diere.kr/" target="_blank" rel="noopener noreferrer">공식 홈페이지 ↗</a></div></header>
+<nav class="quick-nav shell" aria-label="주요 안내"><a href="#team-schedule">방송 일정</a><a href="#studios">스튜디오</a><a href="#prepare">필수 양식</a><a href="#resources">자료실</a></nav>
 <main class="shell" id="main">
 
 <section id="studios" class="studio-section" aria-labelledby="studios-title">
@@ -18,6 +19,19 @@
 </div><p class="studio-footnote"><strong>화요일·토요일 대관은 취소되었습니다.</strong> 금요일은 팀별 장소가 다르니 소속 팀을 확인해주세요. 일정 변경 시 담당 매니저의 안내를 확인해주세요.</p>
 </section>
 
+
+<section id="team-schedule" class="team-schedule" aria-labelledby="team-schedule-title">
+  <div class="schedule-heading"><div><p class="label">팀별 방송 일정</p><h2 id="team-schedule-title">디에르 일정표</h2></div><a href="https://diere-team-schedule.editbsw.chatgpt.site/#schedule" target="_blank" rel="noopener noreferrer" class="schedule-original">원본 일정표</a></div>
+  <p class="section-note">팀과 시즌을 골라 방송 날짜, 의상과 장소를 확인하세요.</p>
+  <div class="sync-row"><p id="schedule-sync" role="status">최신 일정을 연결하고 있습니다.</p><button type="button" id="schedule-refresh" class="button outline">새로고침</button></div>
+  <p class="schedule-notice" id="schedule-notice" hidden></p>
+  <div id="schedule-next" class="schedule-next" hidden></div>
+  <div class="schedule-filters"><div id="schedule-teams" class="team-filters" role="group" aria-label="팀 선택"></div><label class="season-label" for="schedule-season">시즌<select id="schedule-season" aria-label="시즌"><option value="all">전체 시즌</option></select></label></div>
+  <div class="month-toolbar"><div class="month-navigation"><button type="button" id="schedule-prev" aria-label="이전 달">‹</button><h3 id="schedule-month"></h3><button type="button" id="schedule-next-month" aria-label="다음 달">›</button></div><button type="button" id="schedule-today" class="button outline">이번 달</button><div class="view-switch" role="group" aria-label="일정 보기 방식"><button type="button" data-calendar-view="calendar" aria-pressed="false">달력</button><button type="button" data-calendar-view="list" aria-pressed="false">목록</button></div></div>
+  <p id="schedule-count" class="schedule-count" aria-live="polite"></p>
+  <div id="schedule-content" aria-busy="true"><p class="schedule-empty">일정을 불러오는 중입니다.</p></div>
+  <p class="schedule-footnote">한국 시간 기준 · 화면을 보고 있을 때 30초마다 자동 확인합니다.<br>연결이 끊기면 마지막 확인 일정과 연결 상태를 표시합니다.</p>
+</section>
 
 <section class="intro" aria-labelledby="page-title"><p class="label required-label">멤버 필수 제출</p><h1 id="page-title">두 양식 모두 직접 작성해<br>담당 매니저에게 <em>꼭 보내주세요.</em></h1><p class="required-purpose">홈페이지 등록과 방송 준비에 필요한 <strong>필수 제출 자료</strong>입니다.</p><p class="intro-note">이미 제출했다면 <strong>미제출·변경된 내용만</strong> 보내주세요.</p><ol class="steps"><li><b>1</b> 양식 복사</li><li><b>2</b> 빈칸 작성·사진 첨부</li><li><b>3</b> 매니저에게 전송</li></ol></section>
 <section id="prepare" aria-labelledby="forms-title"><h2 id="forms-title" class="sr-only">작성해서 보내야 할 두 가지 양식</h2>
@@ -39,16 +53,10 @@
 <a href="https://drive.google.com/drive/folders/1TCZTMGSbcMX5_nc1yk9X2jCD67-1eY3U" target="_blank" rel="noopener noreferrer">현준팀 라이브 녹화본 · Google Drive <span>↗</span></a>
 <a href="https://mega.nz/folder/zkI2gKoQ#JZUVz2ED4AOV3agDWNF_uA" target="_blank" rel="noopener noreferrer">쇼츠용 편집본 <span>↗</span></a>
 </div><p class="link-note">자료는 새 창에서 열립니다.</p></section>
-<section id="team-schedule" class="team-schedule" aria-labelledby="team-schedule-title">
-<div class="schedule-heading"><div><p class="label">팀별 방송 일정</p><h2 id="team-schedule-title">디에르 일정표</h2></div><a href="https://diere-team-schedule.editbsw.chatgpt.site/#schedule" target="_blank" rel="noopener noreferrer" class="schedule-original">크게 보기 ↗</a></div>
-<p class="section-note">일요일부터 토요일까지 전체 요일이 보입니다. 팀과 시즌을 선택하고 날짜를 눌러 상세 일정을 확인하세요.</p>
-<div class="schedule-controls" role="group" aria-label="일정표 크기"><button class="button outline" data-schedule-view="fit" aria-pressed="true">전체 요일 보기</button><button class="button outline" data-schedule-view="actual" aria-pressed="false">글씨 확대</button></div>
-<p id="schedule-view-help" class="studio-footnote">전체 요일을 화면 폭에 맞춰 보여줍니다. 글씨 확대를 누르면 좌우로 이동하며 볼 수 있습니다.</p>
-<div class="schedule-viewport" role="region" aria-label="디에르 일정표" aria-describedby="schedule-view-help" tabindex="0"><div class="schedule-canvas"><iframe class="schedule-embed" src="https://diere-team-schedule.editbsw.chatgpt.site/" title="디에르 팀별 스케줄 · 시즌 및 팀별 필터와 달력" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
-<p class="studio-footnote">일정표가 보이지 않으면 <a href="https://diere-team-schedule.editbsw.chatgpt.site/#schedule" target="_blank" rel="noopener noreferrer">일정표 크게 보기 ↗</a>를 눌러주세요.</p>
-</section>
+
 <footer><strong>더디에르</strong><a href="#">맨 위로 ↑</a></footer>
 </main>
+<dialog id="schedule-dialog" aria-labelledby="schedule-dialog-title"><div class="schedule-dialog-heading"><h2 id="schedule-dialog-title">일정 상세</h2><form method="dialog"><button class="button outline" aria-label="일정 상세 닫기">닫기</button></form></div><div id="schedule-dialog-content"></div></dialog>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <dialog id="copy-dialog"><h2>양식을 복사해주세요</h2><p>아래 내용을 복사해 빈칸을 작성한 뒤, 사진과 함께 담당 매니저에게 꼭 보내주세요.</p><textarea id="copy-fallback" aria-label="복사할 제출 양식" readonly></textarea><form method="dialog"><button class="button primary">닫기</button></form></dialog>
 <noscript><p class="noscript">양식 복사는 JavaScript가 필요합니다. ‘작성 항목 보기’를 열어 항목을 확인한 뒤 작성해주세요.</p></noscript>

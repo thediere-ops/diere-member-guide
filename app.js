@@ -40,6 +40,7 @@ document.querySelectorAll('[data-copy]').forEach(button => {
 
 // Keep the date and weekday in Korea time, including after midnight or returning to the tab.
 function updateStudioToday(now = new Date()) {
+  if (window.diereScheduleLoaded) return;
   const parts = new Intl.DateTimeFormat('ko-KR', {
     timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short'
   }).formatToParts(now);
@@ -59,8 +60,8 @@ function updateStudioToday(now = new Date()) {
     }
   });
   const message = todayStudios.length
-    ? '오늘은 ' + weekday + '요일 · ' + todayStudios.join(' / ')
-    : '오늘은 ' + weekday + '요일 · 대관 취소로 정기 스튜디오 이용이 없습니다. 별도 일정은 담당 매니저에게 확인해주세요.';
+    ? '정기 장소 안내 · ' + weekday + '요일 · ' + todayStudios.join(' / ')
+    : '정기 장소 안내 · 실제 방송 여부와 변경 사항은 아래 일정표를 확인해주세요.';
   const status = document.getElementById('today-studio');
   if (status.textContent !== message) status.textContent = message;
 }
@@ -90,35 +91,3 @@ document.querySelectorAll('[data-address]').forEach(button => {
   });
 });
 
-// The external calendar has a 910px minimum width. Give it a desktop
-// viewport, then scale the entire frame so all seven columns remain visible.
-const scheduleViewport = document.querySelector('.schedule-viewport');
-const scheduleCanvas = document.querySelector('.schedule-canvas');
-const scheduleFrame = document.querySelector('.schedule-embed');
-let scheduleView = 'fit';
-function resizeSchedule() {
-  const availableWidth = scheduleViewport.clientWidth;
-  if (!availableWidth) return;
-  const frameWidth = Math.max(1040, availableWidth);
-  const frameHeight = 3600;
-  const scale = scheduleView === 'fit' ? Math.min(1, availableWidth / frameWidth) : 1;
-  scheduleFrame.style.width = frameWidth + 'px';
-  scheduleFrame.style.height = frameHeight + 'px';
-  scheduleFrame.style.transform = 'scale(' + scale + ')';
-  scheduleCanvas.style.width = (frameWidth * scale) + 'px';
-  scheduleCanvas.style.height = (frameHeight * scale) + 'px';
-}
-document.querySelectorAll('[data-schedule-view]').forEach(button => {
-  button.addEventListener('click', () => {
-    scheduleView = button.dataset.scheduleView;
-    document.querySelectorAll('[data-schedule-view]').forEach(control => {
-      control.setAttribute('aria-pressed', String(control === button));
-    });
-    resizeSchedule();
-    scheduleViewport.scrollLeft = 0;
-  });
-});
-if ('ResizeObserver' in window) new ResizeObserver(resizeSchedule).observe(scheduleViewport);
-window.addEventListener('resize', resizeSchedule);
-scheduleFrame.addEventListener('load', resizeSchedule);
-resizeSchedule();
